@@ -1,0 +1,49 @@
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) { @content; }
+  }
+}
+
+@mixin button-variant($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s;
+  
+  &:hover {
+    background-color: darken($bg-color, 20%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba($bg-color, 0.8);
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 1rem;
+}
+.flex2{
+  display: flex;
+  justify-content:space-around;
+  margin: 2rem 0;
+  gap: 5rem;
+}
+.text-center{
+  text-align: center;
+}

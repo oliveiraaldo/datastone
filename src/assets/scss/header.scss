@@ -1,0 +1,24 @@
+header{
+  background-color: #d8d8d8;
+  width: 100%;
+  color: $color-primary;
+  padding: 1rem 0 1rem 0;
+}
+header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .menu ul, header nav .user ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+header nav ul li:hover{
+  cursor: pointer;
+  color: $color-secondary;
+  transition: all 0.3s ease;
+}
